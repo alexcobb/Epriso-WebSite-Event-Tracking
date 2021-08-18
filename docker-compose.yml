@@ -6,12 +6,12 @@ services:
     ports:
       - "8090:80"
     volumes: 
-      - C:\DemoSite\root\DockerCompose\CreatioDemo\site.conf:/etc/nginx/conf.d/site.conf
-      - C:\DemoSite\root\DockerCompose\CreatioDemo\EventTrackingCreatio:/code
+      - C:\CreatioDemo\site.conf:/etc/nginx/conf.d/site.conf
+      - C:\CreatioDemo\EventTrackingCreatio:/code
     links:
       - php
     
   php:
     image: php:7-fpm
     volumes: 
-      - C:\DemoSite\root\DockerCompose\CreatioDemo\EventTrackingCreatio:/code
+      - C:\CreatioDemo\EventTrackingCreatio:/code
